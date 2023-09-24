@@ -1,0 +1,13 @@
+# for development env
+
+FROM node:alpine3.10
+
+WORKDIR /qr-code-component
+
+COPY ./package.json /qr-code-component
+
+RUN npm install
+
+COPY . /qr-code-component
+
+CMD [ "npm","start" ]
